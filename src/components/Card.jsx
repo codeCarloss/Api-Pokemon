@@ -17,7 +17,6 @@ export default function Card({
   id = "—",
   shiny = "",
   stats = [],
-  // opcional: types (["fire","water"]) si quieres colores por tipo
   types = [],
 }) {
   const safeStats = Array.isArray(stats) ? stats : [];
@@ -46,12 +45,12 @@ export default function Card({
         <div>
           <h2
             id={`pokemon-${id}`}
-            className="text-2xl font-extrabold text-white tracking-tight"
+            className="text-2xl font-extrabold text-black tracking-tight"
           >
             #{id} — {String(nom).toUpperCase()}
           </h2>
-          <p className="text-sm text-white/90 mt-1">
-            {safeHabs.length > 0 ? safeHabs.join(" / ") : "Habilidades desconocidas"}
+          <p className="text-sm text-black/90 mt-1">
+            Habilidades: {safeHabs.length > 0 ? safeHabs.join(" / ") : "Habilidades desconocidas"}
           </p>
         </div>
 
